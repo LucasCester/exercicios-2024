@@ -19,6 +19,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+a{
+	text-decoration: none;
+}
+
 @font-face{
 	font-family: Roboto;
 	src: url(./assets/fonts/roboto/Roboto-Regular.ttf);
