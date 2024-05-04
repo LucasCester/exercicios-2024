@@ -564,7 +564,7 @@ h2.title{
 
 .details-section{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 10px;
 }
 
@@ -712,6 +712,12 @@ h2.title{
   padding: 6px;
   position: relative;
   top: -26px;
+  transition: 0.2s all;
+}
+
+.btn-create-topic:hover{
+  background: linear-gradient(180deg, #d19346 0%, #cc6e34 100%);
+  cursor: pointer;
 }
 
 .btn-create-topic fa-icon{
@@ -730,7 +736,7 @@ h2.title{
   margin: 0px 3px;
 }
 
-.create-question hr{
+hr{
   width: 100%;
   border: 1px solid #E7E7E7
 }

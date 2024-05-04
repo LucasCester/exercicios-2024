@@ -47,6 +47,11 @@
   margin-right: 15px;
 }
 
+.topic-card-footer #faEllipsisVertical:hover{
+  color: #c5612b;
+  cursor: pointer;
+}
+
 .topic-card-footer button{
   width: 28px;
   height: 21px;
@@ -56,6 +61,11 @@
   background-color: #ED7839;
   box-shadow: 0px 2px 2px 0px #0000003D;
   margin-right: 15px;
+}
+
+.topic-card-footer button:hover{
+  background-color: #c5612b;
+  cursor: pointer;
 }
 
 .topic-card-footer button #faHeart{
