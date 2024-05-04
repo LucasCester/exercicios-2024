@@ -34,9 +34,9 @@
           </h2>
           <div class="topic-buttons">
             <div id="topic-buttons-div">
-              <button class="download-btn"><fa-icon [icon]="faDownload" id="faGlobe"></fa-icon> <span>Download</span></button>
-              <button class="favorite-btn"><fa-icon [icon]="faStar" id="faGlobe"></fa-icon></button>
-              <button class="doi-btn"><img src="../../assets/imgs/doi.png" alt="doi-logo"></button>
+              <a class="download-btn"><fa-icon [icon]="faDownload" id="faGlobe"></fa-icon> <span>Download</span></a>
+              <a class="favorite-btn"><fa-icon [icon]="faStar" id="faGlobe"></fa-icon></a>
+              <a class="doi-btn"><img src="../../assets/imgs/doi.png" alt="doi-logo"></a>
             </div>
             <p>COMO CITAR ESSE TRABALHO?</p>
           </div>
@@ -191,18 +191,20 @@
               </button>
             </div>
             <div class="form-new-question" *ngIf="createQuestionStage == 2">
-              <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
-              <div class="question-info">
-                <label for="questionSubject">Assunto</label>
-                <input type="text" id="questionSubject" placeholder="Defina um tópico sucinto para notificar os autores...">
-              </div>
-              <div class="question-info">
-                <label for="questionContent">Conteúdo</label>
-                <input type="text" id="questionContent">
-                <div class="questionContentFooter">
-                  <button (click)="changeQuestionStage(3)">Enviar</button>
+              <form>
+                <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+                <div class="question-info">
+                  <label for="questionSubject">Assunto</label>
+                  <input type="text" id="questionSubject" class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
                 </div>
-              </div>
+                <div class="question-info">
+                  <label for="questionContent">Conteúdo</label>
+                  <input type="text" id="questionContent">
+                  <div class="questionContentFooter">
+                    <button (click)="changeQuestionStage(3)">Enviar</button>
+                  </div>
+                </div>
+              </form>
             </div>
             <div *ngIf="createQuestionStage == 3">
               <div class="question-created">
@@ -219,8 +221,8 @@
               </div>
               <app-topic-card blur="true"></app-topic-card>
             </div>
-            <app-topic-card blur="false"></app-topic-card>
-            <app-topic-card blur="false"></app-topic-card>
+            <app-topic-card></app-topic-card>
+            <app-topic-card expand="true"></app-topic-card>
           </div>
         </div>
       </div>

@@ -9,8 +9,17 @@ import { faHeart, faEllipsisVertical, faCheckDouble } from '@fortawesome/free-so
 export class TopicCardComponent{
 
   @Input() blur: string = "";
+  @Input() expand: string = "";
 
   faHeart = faHeart;
   faEllipsisVertical = faEllipsisVertical;
   faCheckDouble = faCheckDouble;
+  expandTopicCard: boolean = false;
+
+  public openTopicResponses(){
+    if(this.expand != "true")
+      return;
+
+    this.expandTopicCard = !this.expandTopicCard;
+  }
 }

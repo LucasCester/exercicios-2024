@@ -1,10 +1,10 @@
-<div class="topic-card">
-  <div class="topic-card-content" *ngIf="blur == 'false'">
+<div class="topic-card" [ngClass]="{'answered-topic': expand === 'true'}" (click)="openTopicResponses()" *ngIf="!expandTopicCard">
+  <div class="topic-card-content" *ngIf="blur != 'true'">
     <div class="topic-card-header">
       <p class="topic-subject">Assunto da pergunta aparece aqui</p>
       <p class="topic-username">Carlos Henrique Santos</p>
     </div>
-    <div class="topic-card-body">
+    <div class="topic-card-body" [ngClass]="{'ops-topic-subject': expand === 'true'}">
       <p>
         Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da 
         dimensão e impacto de processo formativo situado impacto de processo formativo 
@@ -13,7 +13,7 @@
     </div>
     <div class="topic-card-footer">
       <fa-icon [icon]="faEllipsisVertical" id="faEllipsisVertical"></fa-icon>
-      <button><fa-icon [icon]="faHeart" id="faHeart"></fa-icon></button>
+      <a><fa-icon [icon]="faHeart" id="faHeart"></fa-icon></a>
       <p>1 like</p>
       <p>1 resposta</p>
     </div>
@@ -37,6 +37,106 @@
       <fa-icon [icon]="faCheckDouble" id="faCheckDouble"></fa-icon>
       <p>Aguardando feedback dos autores</p>
       <a>Editar tópico</a>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="expandTopicCard" class="expanded-topic-card">
+  <div class="topic-card answered-topic" [ngClass]="{'clickableTopic': expand === 'true', 'adjustToOpenAnsweres': expandTopicCard}" (click)="openTopicResponses()">
+    <div class="topic-card-content">
+      <div class="topic-card-header">
+        <p class="topic-subject">Assunto da pergunta aparece aqui</p>
+        <p class="topic-username">Carlos Henrique Santos</p>
+      </div>
+      <div class="topic-card-body opened-question">
+        <p>
+          Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da 
+          dimensão e impacto de processo formativo situado impacto de processo formativo 
+          processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo
+          formativo situado impacto de processo formativo processo?
+        </p>
+      </div>
+      <div class="topic-card-footer">
+        <fa-icon [icon]="faEllipsisVertical" id="faEllipsisVertical"></fa-icon>
+        <a><fa-icon [icon]="faHeart" id="faHeart"></fa-icon></a>
+        <p>4 like</p>
+        <p>4 resposta</p>
+      </div>
+    </div>
+  </div>
+  <div class="comments-container">
+    <div class="answere" id="answere-1">
+      <div class="answere-content">
+        <div class="answere-header">
+          <p class="author">Adriano da Silva</p>
+          <p class="user-type">Autor</p>
+        </div>
+        <div class="answere-body">
+          <p>
+            Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto 
+            de processo formativo situado impacto de processo formativo processo resente relato 
+            inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto 
+            de processo formativo processo.
+          </p>
+        </div>
+      </div>
+      <fa-icon [icon]="faCheckDouble" id="faCheckDouble"></fa-icon>
+    </div>
+    <div class="answere" id="answere-2">
+      <div class="answere-content">
+        <div class="answere-header">
+          <p class="author">Carlos Henrique Santos</p>
+        </div>
+        <div class="answere-body">
+          <p>
+            Consegui entender melhor agora! Parece que a variação da análise da dimensão e 
+            impacto de processo formativo situado impacto de processo formativo.
+          </p>
+          <p>
+            Obrigada pela resposta, muito interessante o seu trabalho!
+          </p>
+        </div>
+      </div>
+      <fa-icon [icon]="faCheckDouble" id="faCheckDouble"></fa-icon>
+    </div>
+    <div class="answere" id="answere-3">
+      <div class="answere-content">
+        <div class="answere-header">
+          <p class="author">Carmila Ferreira Andrade</p>
+          <p class="user-type">Coautor</p>
+        </div>
+        <div class="answere-body">
+          <p>
+            Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e 
+            impacto de processo formativo situado impacto de processo formativo processo resente relato 
+            inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto 
+            de processo formativo processo.
+          </p>
+          <p>
+            Situado impacto de processo formativo processo resente relato inscreve-se no campo da 
+            análise da dimensão e impacto de processo formativo situado impacto de processo formativo 
+            processo.
+          </p>
+        </div>
+      </div>
+      <fa-icon [icon]="faCheckDouble" id="faCheckDouble"></fa-icon>
+    </div>
+    <div class="answere" id="answere-4">
+      <div class="answere-content">
+        <div class="answere-header">
+          <p class="author">Ana Carolina</p>
+          <p class="user-type">Coautor</p>
+        </div>
+        <div class="answere-body">
+          <p>
+            Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto 
+            de processo formativo situado impacto de processo formativo processo resente relato 
+            inscreve-se no campo da análise da dimensão e impacto de processo formativo situado 
+            impacto de processo formativo processo.
+          </p>
+        </div>
+      </div>
+      <fa-icon [icon]="faCheckDouble" id="faCheckDouble"></fa-icon>
     </div>
   </div>
 </div>
