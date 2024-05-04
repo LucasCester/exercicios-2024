@@ -486,3 +486,77 @@ h2.title{
   color: #ED7839;
   margin-top: 10px;
 }
+
+.video{
+  width: 100%;
+  max-width: 783px;
+  min-height: 439px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-image: url(../../assets/imgs/video.png);
+  background-size: cover;
+  box-shadow: inset 0 0 0 500px #8D350680;
+  border-radius: 3px;
+}
+
+.video-title{
+  padding: 34px;
+}
+
+.video-title p{
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.participant-info{
+  display: flex;
+  padding: 0px 34px 50px 34px;
+}
+
+.participant-info .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+}
+
+.participant-info p {
+  font-family: Roboto;
+  font-weight: 900;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.participant-info .name{
+  font-size: 34px;
+}
+
+.participant-info .about{
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.photo{
+  width: 75px;
+  height: 78px;
+  background-color: red;
+  border-radius: 50%;
+  background-size: cover;
+  position: relative;
+  outline: 1px solid #ED7839;
+  outline-offset: 3px;
+  overflow: hidden;
+}
+
+.photo img {
+  position: relative;
+  width: 143.88px;
+  height: 187.33px;
+  top: -15.33px;
+  left: -39.93px;
+}
