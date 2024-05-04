@@ -668,3 +668,69 @@ h2.title{
 .full-summary p{
   margin-bottom: 25px;
 }
+
+.card#summary {
+  margin-bottom: 2rem;
+}
+
+.create-question{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discussions-title{
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+  color: #ED7839;
+  margin-bottom: 1.75rem;
+}
+
+.create-question img{
+  margin: 0px 2rem 2.25rem 0px;
+}
+
+.discussions-text{
+  font-family: Quicksand;
+  max-width: 630px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.25px;
+  text-align: center;
+  color: #595959;
+  margin: 1.75rem;
+}
+
+.btn-create-topic{
+  border: 0;
+  color: #ffffff;
+  background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+  box-shadow: 0px 2px 2px 0px #0000003D;
+  border-radius: 5px;
+  padding: 6px;
+  position: relative;
+  top: -26px;
+}
+
+.btn-create-topic fa-icon{
+  font-size: 17px;
+  margin: 0px 3px;
+  position: relative;
+  top: 2px;
+}
+
+.btn-create-topic span{
+  font-family: Quicksand;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  margin: 0px 3px;
+}
+
+.create-question hr{
+  width: 100%;
+  border: 1px solid #E7E7E7
+}

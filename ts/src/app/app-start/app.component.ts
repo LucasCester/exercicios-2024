@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faGlobe, faCaretDown, faStar, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faCaretDown, faStar, faDownload, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,7 @@ export class AppComponent {
   faCaretDown = faCaretDown;
   faStar = faStar;
   faDownload = faDownload;
+  faPlus = faPlus;
 
   showMore: boolean = false;
 
