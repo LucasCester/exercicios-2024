@@ -11,4 +11,10 @@ export class AppComponent {
   faCaretDown = faCaretDown;
   faStar = faStar;
   faDownload = faDownload;
+
+  showMore: boolean = false;
+
+  public switchSummary(): void{
+    this.showMore = !this.showMore;
+  }
 }

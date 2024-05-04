@@ -278,7 +278,7 @@ header{
   background: #FDF1EB;
 }
 
-.summary{
+.topic-title{
   font-family: Roboto;
   color: #725C5C;
   font-weight: 400;
@@ -287,13 +287,13 @@ header{
   flex-grow: 3;
 }
 
-.summary .topic,
-.summary .issn-code{
+.topic-title .topic-summary,
+.topic-title .issn-code{
   font-size: 14px;
   line-height: 16.41px
 }
 
-.summary .title{
+.topic-title .title{
   font-size: 22px;
   line-height: 25.78px;
 }
@@ -593,7 +593,7 @@ h2.title{
 .card-body{
   font-family: Quicksand;
   font-weight: 400;
-  color: #4E4E4E;
+  color: #5C5C5C;
 }
 
 .details-section .card-body{
@@ -643,4 +643,28 @@ h2.title{
   line-height: 12px;
   color: #c2b8b8;
   margin-bottom: 40px;
+}
+
+.summary p,
+.full-summary p{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.75px;
+  letter-spacing: 0.02em;
+}
+
+.btn-show-more{
+  font-weight: 700;
+  line-height: 21.33px;
+  color: #ED7839;
+}
+
+.btn-show-more:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.full-summary p{
+  margin-bottom: 25px;
 }

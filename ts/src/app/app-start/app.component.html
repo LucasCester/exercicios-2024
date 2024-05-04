@@ -2,8 +2,8 @@
   <app-sidebar></app-sidebar>
   <div class="main">
     <header>
-      <div class="summary">
-        <p class="topic">Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
+      <div class="topic-title">
+        <p class="topic-summary">Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
         <p class="title">Anais do 13º Simpósio Latino Americano de Ciências de Alimentos</p>
         <p class="issn-code">ISSN: 1234-5678</p>
       </div>
@@ -108,7 +108,67 @@
         </div>
       </div>
       
-      
+      <div class="card">
+        <div class="card-title"><span>Resumo</span></div>
+        <div class="card-body">
+          <div class="card-content">
+            <div class="summary" *ngIf="!showMore">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis 
+                auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget 
+                cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. 
+                Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus 
+                nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id 
+                leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin 
+                ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum 
+                orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque 
+                sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  
+                Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant...
+                <a class="btn-show-more" (click)="switchSummary()">ver mais</a>
+              </p>
+            </div>
+            <div class="full-summary" *ngIf="showMore">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio turpis, 
+                pulvinar et porta ut, bibendum ut massa. Aliquam eros elit, aliquet in porttitor 
+                a, scelerisque ac neque. Curabitur eu magna sem. Cras tincidunt odio a purus 
+                faucibus, quis vulputate risus euismod. Pellentesque efficitur nunc at orci 
+                porttitor finibus. Morbi feugiat quis ante sit amet sollicitudin. Phasellus 
+                magna mauris, varius eget metus non, dapibus mollis leo. Sed eget semper sapien. 
+                Morbi tincidunt cursus erat, ac vulputate libero ultrices ac. Fusce quis ultrices 
+                metus.
+              </p>
+              <p>
+                Morbi rhoncus suscipit eros. Praesent rutrum egestas pharetra. Suspendisse 
+                potenti. Nunc ornare efficitur commodo. Phasellus finibus enim id eros posuere 
+                iaculis. Phasellus eu vulputate tellus, at commodo nibh. Donec egestas, massa et 
+                volutpat porttitor, magna lacus egestas dolor, vel consectetur felis leo nec sem. 
+                Ut posuere lacus quis aliquam porta.
+              </p>
+              <p>
+                Proin cursus leo vitae lacus ultrices lacinia. Cras consequat vel erat sit amet 
+                vehicula. Duis at viverra ligula. Duis condimentum nec nibh id lacinia. Sed 
+                fermentum lacinia finibus. Proin et ex sagittis, euismod neque in, molestie est. 
+                Donec et sem sed nisi malesuada condimentum ac ac odio. Suspendisse tempus sed 
+                tortor quis porta. Nulla vitae eleifend risus, convallis aliquet neque. Praesent 
+                mi felis, ultricies in vestibulum quis, commodo eu libero. Vestibulum quis diam 
+                sed ipsum bibendum semper. In bibendum diam sed scelerisque blandit.
+              </p>
+              <p>
+                Phasellus imperdiet ante ligula, hendrerit lacinia neque tristique vel. Praesent 
+                cursus pharetra tempor. Nam in eleifend lorem, nec bibendum risus. Etiam semper,
+                 dui id consequat imperdiet, metus erat ullamcorper ex, at blandit dui ligula 
+                 tincidunt felis. Quisque rhoncus erat et lorem convallis, ut sagittis quam 
+                 laoreet. Praesent mattis neque rhoncus, cursus nulla rhoncus, interdum ligula. 
+                 Integer sed suscipit dui. Integer et sem condimentum, egestas ex at, aliquet 
+                 purus. Etiam venenatis odio ut mauris mattis auctor. Donec eu felis sit amet 
+                 arcu convallis tristique varius a augue. 
+                 <a class="btn-show-more" (click)="switchSummary()">ver menos</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
