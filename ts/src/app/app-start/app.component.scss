@@ -673,7 +673,8 @@ h2.title{
   margin-bottom: 2rem;
 }
 
-.create-question{
+.create-question,
+.question-created{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -704,6 +705,8 @@ h2.title{
 }
 
 .btn-create-topic{
+  max-width: 235.15px;
+  height: 32px;
   border: 0;
   color: #ffffff;
   background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
@@ -715,7 +718,8 @@ h2.title{
   transition: 0.2s all;
 }
 
-.btn-create-topic:hover{
+.btn-create-topic:hover,
+.questionContentFooter button:hover{
   background: linear-gradient(180deg, #d19346 0%, #cc6e34 100%);
   cursor: pointer;
 }
@@ -739,4 +743,112 @@ h2.title{
 hr{
   width: 100%;
   border: 1px solid #E7E7E7
+}
+
+.form-new-question{
+  border-bottom: 1px solid #E7E7E7;
+  margin-bottom: 40px;
+}
+
+.form-new-question p{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.5px;
+  text-align: center;
+  color: #5C5C5C;
+  margin-bottom: 20px;
+}
+
+.question-info{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.question-info label{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.75px;
+  color: #ED7839;
+}
+
+.question-info input{
+  border: 1px solid #CCCCCC;
+  background-color: #ffffff;
+}
+
+.question-info input:focus-visible{
+  border: 1px solid #a1a1a1;
+  background-color: #fdf1eb;
+  outline: none;
+}
+
+.question-info input#questionSubject,
+.question-info input#questionContent{
+  padding-left: 25px;
+  color: #4D4D4D;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.5px;
+}
+
+.question-info input#questionSubject{
+  min-height: 40px;
+  border-radius: 3px;
+}
+
+.question-info input#questionContent{
+  min-height: 82px;
+  border-radius: 3px 3px 0px 0px
+}
+
+.questionContentFooter{
+  height: 31px;
+  border: 1px solid #CCCCCC;
+  border-top: none;
+  border-radius: 0px 0px 3px 3px;
+  background-color: #EAF1F2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.questionContentFooter button{
+  height: 100%;
+  width: 100%;
+  max-width: 205.1px;
+  border: 0;
+  border-radius: 0px 0px 4px 0px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+}
+
+.question-created .thanks{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.25px;
+  color: #595959;
+  margin-bottom: 40px;
+}
+
+.question-created a{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.25px;
+  text-decoration: underline;
+  color: #F48F44;
+  margin-bottom: 60px;
+}
+
+.question-created a:hover{
+  cursor: pointer;
+  color: #ce6329;
+}
+
+.question-created .btn-create-topic{
+  width: 100%;
 }

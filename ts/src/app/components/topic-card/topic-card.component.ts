@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { faHeart, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input } from '@angular/core';
+import { faHeart, faEllipsisVertical, faCheckDouble } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-topic-card',
@@ -8,6 +8,9 @@ import { faHeart, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 })
 export class TopicCardComponent{
 
+  @Input() blur: string = "";
+
   faHeart = faHeart;
   faEllipsisVertical = faEllipsisVertical;
+  faCheckDouble = faCheckDouble;
 }

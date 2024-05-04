@@ -81,3 +81,47 @@
   color: #4D4D4D;
   margin-right: 15px;
 }
+
+.blur{
+  filter: blur(5px);
+}
+
+.waiting-feedback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -60px;
+}
+
+.waiting-feedback fa-icon{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.waiting-feedback p{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #707070;
+  margin-bottom: 10px;
+}
+
+.waiting-feedback a{
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.62px;
+  color: #ED7839;
+  text-decoration: underline;
+}
+
+.waiting-feedback a:hover{
+  cursor: pointer;
+  color: #ce6329;
+}
+
+.topic-card:has(.topic-card-content.blur){
+  background-color: #e6e6e6;
+}

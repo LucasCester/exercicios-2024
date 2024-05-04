@@ -1,5 +1,5 @@
 <div class="topic-card">
-  <div class="topic-card-content">
+  <div class="topic-card-content" *ngIf="blur == 'false'">
     <div class="topic-card-header">
       <p class="topic-subject">Assunto da pergunta aparece aqui</p>
       <p class="topic-username">Carlos Henrique Santos</p>
@@ -16,6 +16,27 @@
       <button><fa-icon [icon]="faHeart" id="faHeart"></fa-icon></button>
       <p>1 like</p>
       <p>1 resposta</p>
+    </div>
+  </div>
+
+  <div *ngIf="blur == 'true'">
+    <div class="topic-card-content blur" >
+      <div class="topic-card-header">
+        <p class="topic-subject">Assunto da pergunta aparece aqui</p>
+        <p class="topic-username">Carlos Henrique Santos</p>
+      </div>
+      <div class="topic-card-body">
+        <p>
+          Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da 
+          dimensão e impacto de processo formativo situado impacto de processo formativo 
+          processo...
+        </p>
+      </div>
+    </div>
+    <div class="waiting-feedback">
+      <fa-icon [icon]="faCheckDouble" id="faCheckDouble"></fa-icon>
+      <p>Aguardando feedback dos autores</p>
+      <a>Editar tópico</a>
     </div>
   </div>
 </div>

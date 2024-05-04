@@ -14,8 +14,13 @@ export class AppComponent {
   faPlus = faPlus;
 
   showMore: boolean = false;
+  createQuestionStage: number = 1;
 
   public switchSummary(): void{
     this.showMore = !this.showMore;
+  }
+
+  public changeQuestionStage(newStage: number): void{
+    this.createQuestionStage = newStage;
   }
 }

@@ -174,7 +174,7 @@
         <div class="card-title"><span>Discussões</span></div>
         <div class="card-body">
           <div class="card-content">
-            <div class="create-question">
+            <div class="create-question" *ngIf="createQuestionStage == 1">
               <p class="discussions-title">Compartilhe suas ideias ou dúvidas com os autores!</p>
               <div>
                 <img src="../../assets/imgs/icon1.png" alt="icon1">
@@ -186,12 +186,41 @@
                 curiosidade? Deixe seus questionamentos ou sugestões para o autor!
               </p>
               <hr>
-              <button class="btn-create-topic">
+              <button class="btn-create-topic" (click)="changeQuestionStage(2)">
                 <fa-icon [icon]="faPlus" id="faPlus"></fa-icon><span>criar tópico</span>
               </button>
             </div>
-            <app-topic-card></app-topic-card>
-            <app-topic-card></app-topic-card>
+            <div class="form-new-question" *ngIf="createQuestionStage == 2">
+              <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+              <div class="question-info">
+                <label for="questionSubject">Assunto</label>
+                <input type="text" id="questionSubject" placeholder="Defina um tópico sucinto para notificar os autores...">
+              </div>
+              <div class="question-info">
+                <label for="questionContent">Conteúdo</label>
+                <input type="text" id="questionContent">
+                <div class="questionContentFooter">
+                  <button (click)="changeQuestionStage(3)">Enviar</button>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="createQuestionStage == 3">
+              <div class="question-created">
+                <p class="discussions-title">Seu tópico foi enviado com sucesso! :D</p>
+                <p class="thanks">
+                  Agradecemos por sua contribuição, uma notificação será enviada ao seu email
+                  assim que seu tópico for respondido!
+                </p>
+                <a>Descubra outros trabalhos!</a>
+                <hr>
+                <button class="btn-create-topic" (click)="changeQuestionStage(2)">
+                  <span>criar novo tópico</span>
+                </button>
+              </div>
+              <app-topic-card blur="true"></app-topic-card>
+            </div>
+            <app-topic-card blur="false"></app-topic-card>
+            <app-topic-card blur="false"></app-topic-card>
           </div>
         </div>
       </div>
